@@ -57,7 +57,8 @@ q2 = st.radio(
 )
 if q2.startswith("A"):
     score += 1
-      st.write("🎉 Fantastisk! Det har du også fortjent.")
+if q2.startswith("A"):
+    st.write("🎉 Fantastisk! Det har du også fortjent.")
 if q2.startswith("B"):
     st.write("😅 Hmm... er det ikke lidt for lidt.")
 if q2.startswith("C"):
