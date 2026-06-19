@@ -57,13 +57,12 @@ q2 = st.radio(
 )
 if q2.startswith("A"):
     score += 1
-if q2.startswith("A"):
     st.write("🎉 Fantastisk! Det har du også fortjent.")
-if q2.startswith("B"):
+elif q2.startswith("B"):
     st.write("😅 Hmm... er det ikke lidt for lidt.")
-if q2.startswith("C"):
+elif q2.startswith("C"):
     st.write("😊 Hvad fuck er det, ain't no way!")
-if q2.startswith("D"):
+elif q2.startswith("D"):
     st.write("Det var lidt bedre, men er det virkelig nok?.")
 
 st.subheader("Spørgsmål 3: Ado")
