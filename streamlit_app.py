@@ -50,7 +50,7 @@ q1 = st.radio(
 if q1.startswith("E"):
     score += 1
 
-st.subheader("Spørgsmål 2: Drikke?")
+st.subheader("Drikke?")
 q2 = st.radio(
     "Hvor mange øl kommer du til at drikke idag",
     ["A) 239", "B) 20", "C) 1 (fat svag)", "D) 30"]
@@ -65,22 +65,37 @@ elif q2.startswith("C"):
 elif q2.startswith("D"):
     st.write("Det var lidt bedre, men er det virkelig nok?.")
 
-st.subheader("Spørgsmål 3: Ado")
+st.subheader("日本語")
 q3 = st.radio(
-    "Hvilket gennembrudshit gjorde Ado kendt i Japan i 2020?",
-    ["A) Cotten eye joe", "B) Usseewa", "C) Barbie Girl", "D) Kaze no Uta"]
+    "日本では、どんなフレーズを一番よく使いますか？",
+    ["A) すみません", "B) よかったら、少し話さない？なんか、すごく気になってて。", "C) 私はハングリーネガダロ", "D) キャラメルラテをアイスで、シロップ多め、氷少なめでお願いします。"]
 )
-if q3.startswith("B"):
+if q3.startswith("C"):
     score += 1
-
+st.subheader("Ado")
+q4 = st.radio(
+    "Ado har en sang der hedder 'where winds meet'",
+    ["A) Ja", "B) Nej"]
+)
+if q4.startswith("A"):
+    score += 1
+st.subheader("Færdig?")
+q5 = st.radio(
+    "Hvornår går vi hjem?",
+    ["A) Kl. Når solen står op", "B) Kl.22:00", "C) Kl. 24:00", "D) Efter Kl. 03:00"]
+)
+if q5.startswith("D"):
+    score += 1
+st.image ("https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a36b1ab&is=6a35602b&hm=e9ff9b0f66d58b993afc31b44dfe40ba8118c8f1519213bb2f54b1b68bed6521&=&format=webp&width=864&height=1152")    
+  
 st.subheader("Spørgsmål 4: Gaveindpakning")
-q4 = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
-if q4 == 50:
+q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
+if q == 50:
     score += 1
 
 st.subheader("Spørgsmål 5: Berserk – karakter")
 q5 = st.radio(
-    "Hvilken af disse karakterer i Berserk bliver kendt som “The White Hawk”?",
+    "Hvilken af disse karakterer i Berserk bliver kendt som 'The White Hawk'?",
     ["A) Guts", "B) Skull Knight", "C) Griffith", "D) Serpico"]
 )
 if q5.startswith("C"):
