@@ -256,6 +256,12 @@ if st.session_state.current_question < len(questions):
             height=270,
         )
     
+    if st.session_state.current_question == 13:  # With "bust en nut" question
+        st.image(
+            "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintoc2/00epsteintictoc2-articleLarge.jpg",
+            width=400,
+        )
+    
     # Next button
     col1, col2 = st.columns(2)
     with col2:
