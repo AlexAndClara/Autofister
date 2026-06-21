@@ -226,16 +226,8 @@ q14 = st.radio(
 if q14.startswith("B"):
     score += 1
 st.subheader("Spørgsmål 4: Gaveindpakning")
-q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
-if q == 50:
-    score += 1
-
-st.subheader("Spørgsmål 5: Berserk – karakter")
-q5 = st.radio(
-    "Hvilken af disse karakterer i Berserk bliver kendt som 'The White Hawk'?",
-    ["A) Guts", "B) Skull Knight", "C) Griffith", "D) Serpico"]
-)
-if q5.startswith("C"):
+q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=200, step=1)
+if q == 138:
     score += 1
 
 st.markdown("---")
