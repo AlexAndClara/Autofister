@@ -188,11 +188,10 @@ questions = [
         "correct": "C"
     },
     {
-        "title": "Statisk billede",
-        "question": "Se det statiske billede og tryk videre, når du er klar.",
+        "title": "Halvvejs",
+        "question": "Du er nu halvvejs gennem quizzen!",
         "type": "info",
-        "image": "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintoc2/00epsteintictoc2-articleLarge.jpg",
-        "text": "Du er nu halvvejs.",
+        "text": "Godt gået! Du er nu halvvejs. Tryk videre for at fortsætte.",
     },
     {
         "title": "bust en nut",
@@ -243,7 +242,7 @@ if st.session_state.current_question < len(questions):
             st.session_state.scores[st.session_state.current_question] = answer
     
     # Show special extra content for certain question indices
-    if st.session_state.current_question == 5:  # After question 6
+    if st.session_state.current_question == 6:  # With Predator question
         st.components.v1.iframe(
             "https://tenor.com/embed/1538483505353367534",
             width=480,
