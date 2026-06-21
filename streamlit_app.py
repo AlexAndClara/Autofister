@@ -40,7 +40,7 @@ elif 3 <= gladhed <= 5:
 elif 5 <= gladhed <= 7:
     st.write("😊 Det lyder som en lettelse – godt gået!")
 else:
-    st.write("🎉 Fantastisk! Det har du også fortjent.")
+    st.write("🎉 Fantastisk! Det har du næsten også fortjent.")
 
 st.markdown("---")
 
