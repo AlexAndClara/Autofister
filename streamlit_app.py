@@ -129,7 +129,7 @@ questions = [
         "question": "Ado har en sang der hedder 'where winds meet'",
         "type": "radio",
         "options": ["A) Ja", "B) Nej"],
-        "correct": "A"
+        "correct": "B"
     },
     {
         "title": "Færdig?",
@@ -201,11 +201,11 @@ questions = [
         "correct": "D"
     },
     {
-        "title": "Billedet",
-        "question": "Se billedet og læs teksten. Tryk videre, når du er klar.",
+        "title": "Epstein",
+        "question": "Se den smukke og uskyldige mand. Håber du valgte det rigtige svar på det forrige spørgsmål.",
         "type": "info",
         "image": "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
-        "text": "Her er billedet til spørgsmålet.",
+        "text": "Fremtidig husbando.",
     },
     {
         "title": "hmm",
@@ -287,18 +287,18 @@ else:
     
     st.write(f"Du fik {score} ud af {len(questions)} rigtige!")
     
-    if score >= len(questions) - 2:
+    if score >= len(questions) - 15:
         st.success("Tillykke – du har gennemført quizen! 🎉")
         st.markdown(
             """
 Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt – det er virkelig sejt gået.  
-Gaven er et tilskud til dine fremtidsplaner fra os tre – **Ulla, Niels og Asbjørn** – og vi ønsker dig alt det bedste i det næste kapitel.
+Gaven er et tilskud til dine fremtidsplaner fra os to – **Alex & Kristoffer** – og vi ønsker dig alt det bedste i det næste kapitel.
 
-Uanset om fremtiden byder på en rejse til Japan eller et kørekort, så håber vi, du får et fantastisk sabbatår og et stærkt afsæt videre. 🌞✈️🚗
+Uanset om fremtiden byder på en rejse til efterlivet eller et kørekort, så håber vi, du får et fantastisk sabbatår og et stærkt afsæt videre. 🌞✈️🚗
 
-**TILLYKKE, Kristoffer!** 🎓🇩🇰❤️
+**TILLYKKE, ❤️Erdwin!❤️** 🎓🇩🇰
 
-Tak fordi du legede med – og tillykke igen fra os alle tre! 💸🎈
+Tak fordi du legede med mig? – og tillykke igen fra os alle to! 💸🎈
             """
         )
     else:
