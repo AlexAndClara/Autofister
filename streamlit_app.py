@@ -1,7 +1,7 @@
 import streamlit as st
 
 # App konfiguration
-st.set_page_config(page_title="Erdwin Studentertrial/totur 🎓", page_icon="🎓")
+st.set_page_config(page_title="Erdwin Studentertrial/totur 🎓💅", page_icon="🎓")
 
 # Session state for music start
 if "music_started" not in st.session_state:
@@ -139,7 +139,7 @@ questions = [
         "correct": "D"
     },
     {
-        "title": "Erwin",
+        "title": "Erwin🤓",
         "question": "Se billedet og læs teksten om Erwin. Tryk videre, når du er klar.",
         "type": "info",
         "image": "https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a38abeb&is=6a375a6b&hm=6b99c951ed4eabf6336239a4c4b3a531f1a1d14425db51fd1b5f21f1664e4cce&=&format=webp&width=864&height=1152",
@@ -170,21 +170,21 @@ questions = [
         "title": "Peak",
         "question": "Hvad er peak?",
         "type": "radio",
-        "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
+        "options": ["A) Erwin", "B) Alex & Kristoffer💦", "C) Ado", "D) Blive rapet af Epstein"],
         "correct": "B"
     },
     {
         "title": "Ikke peak?",
         "question": "Hvad er ikke peak?",
         "type": "radio",
-        "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
+        "options": ["A) Erwin", "B) Alex & Kristoffer💦", "C) Ado", "D) Blive rapet af Epstein"],
         "correct": "A"
     },
     {
         "title": "Hvem?",
         "question": "Hvem er hvem?",
         "type": "radio",
-        "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
+        "options": ["A) Erwin", "B) Alex & Kristoffer💦", "C) Ado", "D) Blive rapet af Epstein"],
         "correct": "C"
     },
     {
@@ -197,15 +197,15 @@ questions = [
         "title": "bust en nut",
         "question": "Lige så peak som at bust en nut?",
         "type": "radio",
-        "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
+        "options": ["A) Erwin", "B) Alex & Kristoffer💦", "C) Ado", "D) Blive rapet af Epstein"],
         "correct": "D"
     },
     {
-        "title": "Epstein",
+        "title": "Epstein🥵",
         "question": "Se den smukke og uskyldige mand. Håber du valgte det rigtige svar på det forrige spørgsmål.",
         "type": "info",
         "image": "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
-        "text": "Fremtidig husbando.",
+        "text": "Fremtidig husbando.🤤nom nom nom",
     },
     {
         "title": "hmm",
@@ -289,17 +289,17 @@ else:
     st.write(f"Du fik {score} ud af {total_questions} rigtige!")
     
     if score == total_questions:
-        st.success("Tillykke – du har gennemført quizen! 🎉")
+        st.success("Tillykke – du har gennemført quizen! 🎉🎀💕🍫🔪")
         st.markdown(
             """
 Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt – det er virkelig sejt gået.  
 Gaven er et tilskud til dine fremtidsplaner fra os to – **Sneaky_Turtle & Yougurt** – og vi ønsker dig alt det bedste i det næste kapitel.
 
-Uanset om fremtiden byder på en rejse til efterlivet, intensiv jagt på dine første bitches ❤️‍🩹 eller et kørekort, så håber vi, du får et fantastisk sabbatår og et stærkt afsæt videre. 🌞✈️🚗
+Uanset om fremtiden byder på en rejse til efterlivet, intensiv jagt på dine første bitches 😈⛓️ eller et kørekort, så håber vi, du får et fantastisk sabbatår og et stærkt afsæt videre. 🌞✈️🚗
 
 **TILLYKKE, ❤️Erdwin!❤️** 🎓🇩🇰😉😉😉😉😉😉
 
-Tak fordi du legede med mig? – og tillykke igen fra os alle to! 💸🎈
+Tak fordi du legede med mig?🥺👉👈 – og tillykke igen fra os alle to! 💸🎈
             """
         )
     else:
