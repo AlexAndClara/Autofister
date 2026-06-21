@@ -87,7 +87,65 @@ if q5.startswith("D"):
     score += 1
 
 st.image ("https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a36b1ab&is=6a35602b&hm=e9ff9b0f66d58b993afc31b44dfe40ba8118c8f1519213bb2f54b1b68bed6521&=&format=webp&width=864&height=1152")    
-st.subheader("Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.")  
+st.subheader("Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.")
+
+st.subheader("Predator")
+q6 = st.radio(
+    "Hvem er IRL predator?",
+    ["A) Erwin", "B) Epstein", "C) Griffith", "D) Ado"]
+)
+if q6.startswith("B"):
+    score += 1
+st.gif("https://tenor.com/da/view/chrishasen-gif-1538483505353367534")
+
+st.subheader("Inkognito?")
+q7 = st.radio(
+    "Hvor mange inkognito-faner har du åben på din telefon?",
+    ["A) 0 (ikke nogen porno magaziner under sengen)", "B) 1-5", "C) 6-10", "D) 11+"]
+)
+if q7.startswith("A"):
+    score += 1
+st.subheader("tal")
+q8 = st.radio(
+    "Hvad er det bedste tal?",
+    ["A) 67", "B) 69", "C) 999", "D) 666"]
+)
+if q8.startswith("A"):
+    score += 1
+st.gif("https://tenor.com/da/view/bosnov-67-bosnov-67-67-meme-gif-16727368109953357722")
+st.subheader("Peak")
+q9 = st.radio(
+    "Hvad er peak?",
+    ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"]
+)
+if q9.startswith("B"):
+    score += 1
+st.subheader("Ikke peak?")
+q10 = st.radio(
+    "Hvad er ikke peak?",
+    ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"]
+)
+if q10.startswith("A"):
+    score += 1
+st.subheader("Hvem?")
+q11 = st.radio(
+    "Hvem er hvem?",
+    ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"]
+)
+if q11.startswith("C"):
+    score += 1
+st.subheader("bust en nut")
+q12 = st.radio(
+    "Lige så peak som at bust en nut?",
+    ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"]
+)
+if q12.startswith("D"):
+    score += 1
+
+st.image("https://www.google.com/search?q=epstein&oq=epstein&gs_lcrp=EgZjaHJvbWUqDwgAEAAYQxjjAhiABBiKBTIPCAAQABhDGOMCGIAEGIoFMgwIARAuGEMYgAQYigUyDwgCEAAYQxjHAxiABBiKBTIMCAMQLhhDGIAEGIoFMgwIBBAAGEMYgAQYigUyDwgFEC4YQxjHAxiABBiKBTIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyMzJqMGo5qAIGsAIB8QVUHgSZ9AiEug&sourceid=chrome&ie=UTF-8#sv=CAMSaxoyKhBlLXU4T3hpa1dIV2RBWEhNMg51OE94aWtXSFdkQVhITToObk9pTFBuNG5EdEJtSU0gBCoxChtfaXQwM2FwejFOdnF4aS1nUDBQVzI4QU1fNTcSEGUtdThPeGlrV0hXZEFYSE0YADABGAcggMXELUoIEAEYASABKAE")
+
+st.underline("Du er snart halvejs")
+
 
 st.subheader("Spørgsmål 4: Gaveindpakning")
 q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
