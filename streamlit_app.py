@@ -59,13 +59,19 @@ if st.session_state.music_started:
         """
         <script>
             function startAudio() {
-                var iframe = document.querySelector('iframe[id="audioPlayer"]');
+                console.log('startAudio called');
+                var iframe = document.getElementById('audioPlayer');
+                console.log('iframe found:', iframe);
                 if (iframe) {
-                    iframe.src = 'https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&start=0&mute=0';
+                    var url = 'https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&start=0&mute=0';
+                    iframe.src = url;
+                    console.log('src set to:', url);
                 }
             }
             startAudio();
-            setTimeout(startAudio, 100);
+            setTimeout(startAudio, 50);
+            setTimeout(startAudio, 200);
+            setTimeout(startAudio, 500);
         </script>
         """,
         height=1,
