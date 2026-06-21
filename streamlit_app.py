@@ -96,9 +96,10 @@ q6 = st.radio(
 )
 if q6.startswith("B"):
     score += 1
-st.markdown(
-    '<img src="https://tenor.com/da/view/chrishasen-gif-1538483505353367534" alt="gif">',
-    unsafe_allow_html=True,
+st.components.v1.iframe(
+    "https://tenor.com/embed/1538483505353367534",
+    width=480,
+    height=270,
 )
 
 st.subheader("Inkognito?")
@@ -115,9 +116,10 @@ q8 = st.radio(
 )
 if q8.startswith("A"):
     score += 1
-st.markdown(
-    '<img src="https://tenor.com/da/view/bosnov-67-bosnov-67-67-meme-gif-16727368109953357722" alt="gif">',
-    unsafe_allow_html=True,
+st.components.v1.iframe(
+    "https://tenor.com/embed/16727368109953357722",
+    width=480,
+    height=270,
 )
 st.subheader("Peak")
 q9 = st.radio(
@@ -148,10 +150,9 @@ q12 = st.radio(
 if q12.startswith("D"):
     score += 1
 
-st.image("https://www.google.com/search?q=epstein&oq=epstein&gs_lcrp=EgZjaHJvbWUqDwgAEAAYQxjjAhiABBiKBTIPCAAQABhDGOMCGIAEGIoFMgwIARAuGEMYgAQYigUyDwgCEAAYQxjHAxiABBiKBTIMCAMQLhhDGIAEGIoFMgwIBBAAGEMYgAQYigUyDwgFEC4YQxjHAxiABBiKBTIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyMzJqMGo5qAIGsAIB8QVUHgSZ9AiEug&sourceid=chrome&ie=UTF-8#sv=CAMSaxoyKhBlLXU4T3hpa1dIV2RBWEhNMg51OE94aWtXSFdkQVhITToObk9pTFBuNG5EdEJtSU0gBCoxChtfaXQwM2FwejFOdnF4aS1nUDBQVzI4QU1fNTcSEGUtdThPeGlrV0hXZEFYSE0YADABGAcggMXELUoIEAEYASABKAE")
+st.image("https://www.google.com/search?q=epstein&oq=epstein&gs_lcrp=EgZjaHJvbWUqDwgAEAAYQxjjAhiABBiKBTIPCAAQABhDGOMCGIAEGIoFMgwIARAuGEMYgAQYigUyDwgCEAAYQxjHAxiABBiKBTIMCAMQLhhDGIAEGIoFMgwIBBAAGEMYgAQYigUyDwgFEC4YQxjHAxiABBiKBTIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyMzJqMGo5qAIGsAIB8QVUHgSZ9AiEug&sourceid=chrome&ie=UTF-8#sv=https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg?quality=75&auto=webp&disable=upscale", width=400)
 
-st.markdown("<u>Du er snart halvejs</u>", unsafe_allow_html=True)
-
+st.line("du er nu halvvejs")
 
 st.subheader("Spørgsmål 4: Gaveindpakning")
 q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
