@@ -174,7 +174,6 @@ q14 = st.radio(
 )
 if q14.startswith("B"):
     score += 1
-st.write("🎵 Tryk play i YouTube-afspilleren herunder for at høre musikken. Autoplay med lyd kan være blokeret i din browser.")
 st.components.v1.html(
     """
     <iframe
