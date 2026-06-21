@@ -29,6 +29,19 @@ st.write("Tillyke med huen Erdwin")
 st.write("Velkommen til din helt egen quiz – en lille del af din studentergave fra dine ynglings venner, der altid vil dig kun godt :). 🎁")
 st.write("Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt untagen idræt...! 👏")
 
+# Introslider
+gladhed = st.slider("På en skala fra 1-10, hvor glad er du for at være færdig med gymnasiet? 🎓", 1, 10)
+
+# Dynamisk respons baseret på valg
+if gladhed < 5:
+    st.write("😅 Hmm... du kunne vist godt være lidt gladere.")
+elif 5 <= gladhed <= 7:
+    st.write("😊 Det lyder som en lettelse – godt gået!")
+else:
+    st.write("🎉 Fantastisk! Det har du også fortjent.")
+
+st.markdown("---")
+
 # Start Quiz button
 col1, col2, col3 = st.columns(3)
 with col2:
@@ -87,19 +100,6 @@ if "current_question" not in st.session_state:
     st.session_state.current_question = 0
 if "scores" not in st.session_state:
     st.session_state.scores = {}
-
-# Introslider
-gladhed = st.slider("På en skala fra 1-10, hvor glad er du for at være færdig med gymnasiet? 🎓", 1, 10)
-
-# Dynamisk respons baseret på valg
-if gladhed < 5:
-    st.write("😅 Hmm... du kunne vist godt være lidt gladere.")
-elif 5 <= gladhed <= 7:
-    st.write("😊 Det lyder som en lettelse – godt gået!")
-else:
-    st.write("🎉 Fantastisk! Det har du også fortjent.")
-
-st.markdown("---")
 
 # Define all questions
 questions = [
