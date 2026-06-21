@@ -201,6 +201,13 @@ questions = [
         "correct": "D"
     },
     {
+        "title": "Billedet",
+        "question": "Se billedet og læs teksten. Tryk videre, når du er klar.",
+        "type": "info",
+        "image": "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+        "text": "Her er billedet til spørgsmålet.",
+    },
+    {
         "title": "hmm",
         "question": "Er det her i virkeligheden sidste spørgsmål?",
         "type": "radio",
@@ -254,12 +261,6 @@ if st.session_state.current_question < len(questions):
             "https://tenor.com/embed/16727368109953357722",
             width=480,
             height=270,
-        )
-    
-    if st.session_state.current_question == 13:  # With "bust en nut" question
-        st.image(
-            "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
-            width=400,
         )
     
     # Next button
