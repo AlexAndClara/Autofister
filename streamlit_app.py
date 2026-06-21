@@ -179,10 +179,10 @@ st.components.v1.html(
     <iframe
         width="1"
         height="1"
-        style="position:absolute; left:-9999px;"
-        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0"
+        style="position:absolute; left:-9999px; opacity:0;"
+        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&start=0"
         frameborder="0"
-        allow="autoplay; encrypted-media"
+        allow="autoplay; encrypted-media; picture-in-picture"
         allowfullscreen
     ></iframe>
     """,
