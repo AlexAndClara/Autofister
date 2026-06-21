@@ -87,7 +87,7 @@ if q5.startswith("D"):
     score += 1
 
 st.image(
-    "erwin_placeholder.png",
+    "https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a38abeb&is=6a375a6b&hm=6b99c951ed4eabf6336239a4c4b3a531f1a1d14425db51fd1b5f21f1664e4cce&=&format=webp&width=864&height=1152",
     width=400,
 )
 st.write("Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.")
@@ -174,10 +174,9 @@ q14 = st.radio(
 )
 if q14.startswith("B"):
     score += 1
-st.audio(
-    "https://www.youtube.com/watch?v=CteoJ3Q-6cU&list=RDCteoJ3Q-6cU&start_radio=1",
-    format="audio/mp3",
-    start_time=0
+st.video(
+    "https://www.youtube.com/watch?v=CteoJ3Q-6cU",
+    start_time=0,
 )
 st.subheader("Spørgsmål 4: Gaveindpakning")
 q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
