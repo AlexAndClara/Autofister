@@ -304,7 +304,7 @@ Uanset om fremtiden byder på en rejse til efterlivet, intensiv jagt på dine f�
 Tak fordi du legede med mig?🥺👉👈 – og tillykke igen fra os alle to! 💸🎈
             """
         )
-st.balloons()
+st.balloons(9)  # Show balloons for celebration
     else:
         st.warning("Hmm, prøv igen og se, om du kan få adgang til gaven... 😉")
     
