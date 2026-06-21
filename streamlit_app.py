@@ -160,6 +160,25 @@ st.image(
 
 st.write("du er nu halvvejs")
 
+st.subheader("hmm")
+q13 = st.radio(
+    "Er det her i virkeligheden sidste spørgsmål?",
+    ["A) Ja", "B) Nej"]
+)
+if q13.startswith("B"):
+    score += 1
+st.subheader("Spil?")
+q14 = st.radio(
+    "Hvad er det bedste spil?",
+    ["A) League of Legends", "B) Minecraft", "C) Warhammer 40k", "D) Fortnite"]
+)
+if q14.startswith("B"):
+    score += 1
+st.audio(
+    "Jaxstyle - Fortnite.mp3",
+    format="audio/mp3",
+    start_time=0
+)
 st.subheader("Spørgsmål 4: Gaveindpakning")
 q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
 if q == 50:
