@@ -258,7 +258,7 @@ if st.session_state.current_question < len(questions):
     
     if st.session_state.current_question == 13:  # With "bust en nut" question
         st.image(
-            "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintoc2/00epsteintictoc2-articleLarge.jpg",
+            "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
             width=400,
         )
     
