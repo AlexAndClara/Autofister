@@ -3,6 +3,10 @@ import streamlit as st
 # App konfiguration
 st.set_page_config(page_title="Erdwin Studentertrial/totur 🎓", page_icon="🎓")
 
+# Session state for music start
+if "music_started" not in st.session_state:
+    st.session_state.music_started = False
+
 # Farver og stil
 st.markdown(
     """
@@ -24,6 +28,53 @@ st.markdown('<p class="big-font">🎓 Tillykke med huen, Erdwin! 🎓</p>', unsa
 st.write("Tillyke med huen Erdwin")
 st.write("Velkommen til din helt egen quiz – en lille del af din studentergave fra dine ynglings venner, der altid vil dig kun godt :). 🎁")
 st.write("Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt untagen idræt...! 👏")
+
+# Start Music button
+col1, col2, col3 = st.columns(3)
+with col2:
+    if st.button("▶️ START MUSIK", key="start_music_button", use_container_width=True):
+        st.session_state.music_started = True
+
+# Hidden audio player placeholder
+st.components.v1.html(
+    """
+    <iframe
+        id="audioPlayer"
+        width="1"
+        height="1"
+        style="position:absolute; left:-9999px; opacity:0; display:none;"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture; accelerometer"
+        allowfullscreen
+    ></iframe>
+    """,
+    height=1,
+    scrolling=False,
+)
+
+# Start music script when button is clicked
+if st.session_state.music_started:
+    st.components.v1.html(
+        """
+        <script>
+            function startAudio() {
+                var iframe = document.querySelector('iframe[id="audioPlayer"]');
+                if (iframe) {
+                    iframe.src = 'https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&start=0&mute=0';
+                }
+            }
+            startAudio();
+            setTimeout(startAudio, 100);
+        </script>
+        """,
+        height=1,
+        scrolling=False,
+    )
+
+# Only show quiz after button is clicked
+if not st.session_state.music_started:
+    st.stop()
 
 # Introslider
 gladhed = st.slider("På en skala fra 1-10, hvor glad er du for at være færdig med gymnasiet? 🎓", 1, 10)
@@ -174,35 +225,6 @@ q14 = st.radio(
 )
 if q14.startswith("B"):
     score += 1
-st.components.v1.html(
-    """
-    <script>
-        function startAudio() {
-            var iframe = document.querySelector('iframe[src*="youtube.com/embed"]');
-            if (iframe) {
-                iframe.src += (iframe.src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
-            }
-        }
-        window.addEventListener('load', startAudio);
-        document.addEventListener('DOMContentLoaded', startAudio);
-        setTimeout(startAudio, 100);
-        setTimeout(startAudio, 500);
-        setTimeout(startAudio, 1000);
-    </script>
-    <iframe
-        id="audioPlayer"
-        width="1"
-        height="1"
-        style="position:absolute; left:-9999px; opacity:0; display:none;"
-        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&start=0&mute=0"
-        frameborder="0"
-        allow="autoplay; encrypted-media; picture-in-picture; accelerometer"
-        allowfullscreen
-    ></iframe>
-    """,
-    height=1,
-    scrolling=False,
-)
 st.subheader("Spørgsmål 4: Gaveindpakning")
 q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
 if q == 50:
