@@ -107,13 +107,13 @@ if "scores" not in st.session_state:
 questions = [
     {
         "title": "Om dig",
-        "question": "Hvor gammel er du?",
+        "question": "Hvor gammel er du?👶",
         "type": "radio",
         "options": ["A) 20", "B) 18", "C) 19", "D) 17", "E) Ingen ved"],
         "correct": "E"
     },
     {
-        "title": "Drikke?",
+        "title": "Drikke?🍻",
         "question": "Hvor mange øl kommer du til at drikke idag",
         "type": "radio",
         "options": ["A) 239", "B) 20", "C) 1 (fat svag)", "D) 30"],
@@ -127,7 +127,7 @@ questions = [
         "correct": "C"
     },
     {
-        "title": "Ado",
+        "title": "Ado💅",
         "question": "Ado har en sang der hedder 'where winds meet'",
         "type": "radio",
         "options": ["A) Yes Sir!", "B) Hell Narh!"],
@@ -135,7 +135,7 @@ questions = [
     },
     {
         "title": "Færdig?",
-        "question": "Hvornår går vi hjem?",
+        "question": "Hvornår går vi hjem?🕑💤😴",
         "type": "radio",
         "options": ["A) Kl. Når solen står op", "B) Kl.22:00", "C) Kl. 24:00", "D) Efter Kl. 03:00"],
         "correct": "D"
@@ -148,7 +148,7 @@ questions = [
         "text": "Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.",
     },
     {
-        "title": "Predator",
+        "title": "Predator😳",
         "question": "Hvem er IRL predator?",
         "type": "radio",
         "options": ["A) Erwin", "B) Epstein", "C) Griffith", "D) Ado"],
@@ -156,7 +156,7 @@ questions = [
     },
     {
         "title": "Inkognito?",
-        "question": "Hvor mange inkognito-faner har du åben på din telefon?",
+        "question": "Hvor mange inkognito-faner har du åben på din telefon?💀",
         "type": "radio",
         "options": ["A) 0 (ikke nogen, han har porno magaziner under sengen)", "B) 1-5", "C) 6-10", "D) 11+"],
         "correct": "A"
@@ -191,7 +191,7 @@ questions = [
     },
     {
         "title": "Halvvejs",
-        "question": "Du er nu halvvejs gennem quizzen!",
+        "question": "Du er nu halvvejs gennem quizzen!🕺",
         "type": "info",
         "text": "Godt gået! Du er nu halvvejs. Tryk videre for at fortsætte.",
     },
@@ -217,7 +217,7 @@ questions = [
         "correct": "B"
     },
     {
-        "title": "Spil?",
+        "title": "Spil?🎲",
         "question": "Hvad er det bedste spil?",
         "type": "radio",
         "options": ["A) League of Legends", "B) Minecraft", "C) Warhammer 40k", "D) Fortnite"],
