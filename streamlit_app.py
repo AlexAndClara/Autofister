@@ -295,7 +295,7 @@ else:
 Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt – det er virkelig sejt gået.  
 Gaven er et tilskud til dine fremtidsplaner fra os to – **Sneaky_Turtle & Yougurt** – og vi ønsker dig alt det bedste i det næste kapitel.
 
-Uanset om fremtiden byder på en rejse til efterlivet eller et kørekort, så håber vi, du får et fantastisk sabbatår og et stærkt afsæt videre. 🌞✈️🚗
+Uanset om fremtiden byder på en rejse til efterlivet, intensiv jagt på dine første bitches ❤️‍🩹 eller et kørekort, så håber vi, du får et fantastisk sabbatår og et stærkt afsæt videre. 🌞✈️🚗
 
 **TILLYKKE, ❤️Erdwin!❤️** 🎓🇩🇰😉😉😉😉😉😉
 
