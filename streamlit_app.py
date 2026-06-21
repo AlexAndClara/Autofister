@@ -290,6 +290,16 @@ else:
     
     st.write(f"Du fik {score} ud af {total_questions} rigtige!")
     st.balloons()
+    st.balloons()
+    st.balloons()
+    st.balloons()
+    st.balloons()
+    st.balloons()
+    st.balloons()
+    st.balloons()
+    st.balloons()
+    st.balloons()
+    st.balloons()
     if score == total_questions:
         st.success("Tillykke – du har gennemført quizen! 🎉🎀💕🍫")
         st.markdown(
