@@ -300,6 +300,7 @@ Gaven er et tilskud til dine fremtidsplaner fra os to – **Sneaky_Turtle & Youg
 Uanset om fremtiden byder på en rejse til efterlivet, intensiv jagt på dine første bitches 😈⛓️ eller et kørekort, så håber vi, du får et fantastisk sabbatår og et stærkt afsæt videre. 🌞✈️🚗
 
 **TILLYKKE, ❤️Erdwin!❤️** 🎓🇩🇰😉😉😉😉😉😉
+st.balloons()
 
 Tak fordi du legede med mig?🥺👉👈 – og tillykke igen fra os alle to! 💸🎈
             """
