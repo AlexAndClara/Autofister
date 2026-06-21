@@ -139,17 +139,24 @@ questions = [
         "correct": "D"
     },
     {
+        "title": "Erwin",
+        "question": "Se billedet og læs teksten om Erwin. Tryk videre, når du er klar.",
+        "type": "info",
+        "image": "https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a38abeb&is=6a375a6b&hm=6b99c951ed4eabf6336239a4c4b3a531f1a1d14425db51fd1b5f21f1664e4cce&=&format=webp&width=864&height=1152",
+        "text": "Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.",
+    },
+    {
         "title": "Predator",
         "question": "Hvem er IRL predator?",
         "type": "radio",
         "options": ["A) Erwin", "B) Epstein", "C) Griffith", "D) Ado"],
-        "correct": "B"
+        "correct": "D"
     },
     {
         "title": "Inkognito?",
         "question": "Hvor mange inkognito-faner har du åben på din telefon?",
         "type": "radio",
-        "options": ["A) 0 (ikke nogen porno magaziner under sengen)", "B) 1-5", "C) 6-10", "D) 11+"],
+        "options": ["A) 0 (ikke nogen, han har porno magaziner under sengen)", "B) 1-5", "C) 6-10", "D) 11+"],
         "correct": "A"
     },
     {
@@ -179,6 +186,13 @@ questions = [
         "type": "radio",
         "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
         "correct": "C"
+    },
+    {
+        "title": "Statisk billede",
+        "question": "Se det statiske billede og tryk videre, når du er klar.",
+        "type": "info",
+        "image": "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintoc2/00epsteintictoc2-articleLarge.jpg",
+        "text": "Du er nu halvvejs.",
     },
     {
         "title": "bust en nut",
@@ -217,19 +231,18 @@ if st.session_state.current_question < len(questions):
     if q["type"] == "number":
         answer = st.number_input(q["question"], min_value=0, max_value=200, step=1, key=f"q_{st.session_state.current_question}")
         st.session_state.scores[st.session_state.current_question] = answer
+    elif q["type"] == "info":
+        st.write(q["question"])
+        if q.get("image"):
+            st.image(q["image"], width=400)
+        if q.get("text"):
+            st.write(q["text"])
     else:
         answer = st.radio(q["question"], q["options"], key=f"q_{st.session_state.current_question}")
         if answer:
             st.session_state.scores[st.session_state.current_question] = answer
     
-    # Show special images and content for certain questions
-    if st.session_state.current_question == 4:  # After question 5
-        st.image(
-            "https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a38abeb&is=6a375a6b&hm=6b99c951ed4eabf6336239a4c4b3a531f1a1d14425db51fd1b5f21f1664e4cce&=&format=webp&width=864&height=1152",
-            width=400,
-        )
-        st.write("Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.")
-    
+    # Show special extra content for certain question indices
     if st.session_state.current_question == 5:  # After question 6
         st.components.v1.iframe(
             "https://tenor.com/embed/1538483505353367534",
@@ -243,13 +256,6 @@ if st.session_state.current_question < len(questions):
             width=480,
             height=270,
         )
-    
-    if st.session_state.current_question == 11:  # After question 12
-        st.image(
-            "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg",
-            width=400,
-        )
-        st.write("du er nu halvvejs")
     
     # Next button
     col1, col2 = st.columns(2)
