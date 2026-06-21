@@ -123,14 +123,14 @@ questions = [
         "title": "日本語",
         "question": "日本では、どんなフレーズを一番よく使いますか？",
         "type": "radio",
-        "options": ["A) すみません", "B) よかったら、少し話さない？なんか、すごく気になってて。", "C) 私はハングリーネガダロ", "D) キャラメルラテをアイスで、シロップ多め、氷少なめでお願いします。"],
+        "options": ["A) すみません🙇‍♂️", "B) よかったら、少し話さない？なんか、すごく気になってて。🫦", "C) 私はハングリーネガダロ🥷", "D) キャラメルラテをアイスで、シロップ多め、氷少なめでお願いします。🧋"],
         "correct": "C"
     },
     {
         "title": "Ado",
         "question": "Ado har en sang der hedder 'where winds meet'",
         "type": "radio",
-        "options": ["A) Ja", "B) Nej"],
+        "options": ["A) Yes Sir!", "B) Hell Narh!"],
         "correct": "B"
     },
     {
