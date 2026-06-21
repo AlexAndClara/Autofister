@@ -174,18 +174,19 @@ q14 = st.radio(
 )
 if q14.startswith("B"):
     score += 1
+st.write("🎵 Tryk play i YouTube-afspilleren herunder for at høre musikken. Autoplay med lyd kan være blokeret i din browser.")
 st.components.v1.html(
     """
     <iframe
-        width="1"
-        height="1"
-        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&mute=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=1&modestbranding=1&rel=0"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen
     ></iframe>
     """,
-    height=1,
+    height=340,
     scrolling=False,
 )
 st.subheader("Spørgsmål 4: Gaveindpakning")
