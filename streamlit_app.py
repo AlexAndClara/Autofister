@@ -63,7 +63,7 @@ if st.session_state.music_started:
                 var iframe = document.getElementById('audioPlayer');
                 console.log('iframe found:', iframe);
                 if (iframe) {
-                    var url = 'https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&start=0&mute=0';
+                    var url = 'https://www.youtube.com/embed/CteoJ3Q-6cU?list=RDCteoJ3Q-6cU&autoplay=1&loop=1&playlist=RDCteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&mute=0';
                     iframe.src = url;
                     console.log('src set to:', url);
                 }
