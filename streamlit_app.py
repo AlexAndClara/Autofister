@@ -289,56 +289,49 @@ else:
                     score += 1
     
     st.write(f"Du fik {score} ud af {total_questions} rigtige!")
-    import streamlit as st
+    st.title("Custom Ballon Animation 🎈")
+    html_code = """
+    <style>
+     body { margin: 0; overflow: hidden; background: white; }
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 30px;
+      height: 40px;
+      background-color: red;
+      border-radius: 50% 50% 50% 50%;
+      opacity: 0.8;
+      animation: floatUp linear infinite;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-120vh) rotate(360deg); }
+    }
+    </style>
 
-st.title("Custom Ballon Animation 🎈")
+    <div id="container"></div>
 
-html_code = """
-<style>
-  body { margin: 0; overflow: hidden; background: white; }
-  .balloon {
-    position: absolute;
-    bottom: -150px;
-    width: 30px;
-    height: 40px;
-    background-color: red;
-    border-radius: 50% 50% 50% 50%;
-    opacity: 0.8;
-    animation: floatUp linear infinite;
-  }
+    <script>
+      const container = document.getElementById("container");
+      const balloonCount = 250;
 
-  @keyframes floatUp {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(-120vh) rotate(360deg); }
-  }
-</style>
-
-<div id="container"></div>
-
-<script>
-  const container = document.getElementById("container");
-  const balloonCount = 250;
-
-  function randomColor() {
-    const colors = ["#ff4b4b", "#ff7f50", "#ffd700", "#90ee90", "#87cefa", "#ba55d3", "#ff69b4"];
-    return colors[Math.floor(Math.random() * colors.length)];
-  }
-
-  for (let i = 0; i < balloonCount; i++) {
-    const b = document.createElement("div");
-    b.className = "balloon";
-    b.style.left = Math.random() * 100 + "vw";
-    b.style.animationDuration = 5 + Math.random() * 10 + "s";
-    b.style.backgroundColor = randomColor();
-    b.style.width = 20 + Math.random() * 40 + "px";
-    b.style.height = 30 + Math.random() * 60 + "px";
-    container.appendChild(b);
-  }
-</script>
-"""
-
-st.html(html_code, height=600)
-
+      function randomColor() {
+        const colors = ["#ff4b4b", "#ff7f50", "#ffd700", "#90ee90", "#87cefa", "#ba55d3", "#ff69b4"];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+    for (let i = 0; i < balloonCount; i++) {
+      const b = document.createElement("div");
+      b.className = "balloon";
+      b.style.left = Math.random() * 100 + "vw";
+      b.style.animationDuration = 5 + Math.random() * 10 + "s";
+      b.style.backgroundColor = randomColor();
+      b.style.width = 20 + Math.random() * 40 + "px";
+      b.style.height = 30 + Math.random() * 60 + "px";
+      container.appendChild(b);
+    }
+    </script>
+    """
+    st.components.v1.html(html_code, height=600)
     if score == total_questions:
         st.success("Tillykke – du har gennemført quizen! 🎉🎀💕🍫")
         st.markdown(
