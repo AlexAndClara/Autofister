@@ -274,8 +274,9 @@ else:
     st.markdown("---")
     st.subheader("🎉 Resultat 🎉")
     
-    # Calculate score
+    # Calculate score across the 15 real quiz questions only
     score = 0
+    total_questions = 15
     for idx, q in enumerate(questions):
         if idx in st.session_state.scores:
             if q.get("type") == "number":
@@ -285,9 +286,9 @@ else:
                 if st.session_state.scores[idx].startswith(q["correct"]):
                     score += 1
     
-    st.write(f"Du fik {score} ud af {len(questions)} rigtige!")
+    st.write(f"Du fik {score} ud af {total_questions} rigtige!")
     
-    if score >= len(questions) - 15:
+    if score == total_questions:
         st.success("Tillykke – du har gennemført quizen! 🎉")
         st.markdown(
             """
