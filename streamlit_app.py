@@ -293,13 +293,14 @@ else:
         st.markdown(
             """
 Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt – det er virkelig sejt gået.  
-Gaven er et tilskud til dine fremtidsplaner fra os to – **Alex & Kristoffer** – og vi ønsker dig alt det bedste i det næste kapitel.
+Gaven er et tilskud til dine fremtidsplaner fra os to – **Sneaky_Turtle & Yougurt** – og vi ønsker dig alt det bedste i det næste kapitel.
 
 Uanset om fremtiden byder på en rejse til efterlivet eller et kørekort, så håber vi, du får et fantastisk sabbatår og et stærkt afsæt videre. 🌞✈️🚗
 
-**TILLYKKE, ❤️Erdwin!❤️** 🎓🇩🇰
+**TILLYKKE, ❤️Erdwin!❤️** 🎓🇩🇰😉😉😉😉😉😉
 
 Tak fordi du legede med mig? – og tillykke igen fra os alle to! 💸🎈
+st.image("https://media.discordapp.net/attachments/1016646559171104769/1518249791845564626/IMG_2251.jpg?ex=6a393bce&is=6a37ea4e&hm=bb8bb7fa4af27687c67a8baf80a35832d41676862cd7830704c205e3c04d3a9c&=&format=webp&width=1020&height=1360)
             """
         )
     else:
