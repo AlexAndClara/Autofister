@@ -82,6 +82,12 @@ if st.session_state.music_started:
 if not st.session_state.music_started:
     st.stop()
 
+# Initialize session state for questions
+if "current_question" not in st.session_state:
+    st.session_state.current_question = 0
+if "scores" not in st.session_state:
+    st.session_state.scores = {}
+
 # Introslider
 gladhed = st.slider("På en skala fra 1-10, hvor glad er du for at være færdig med gymnasiet? 🎓", 1, 10)
 
@@ -95,157 +101,182 @@ else:
 
 st.markdown("---")
 
-# Spørgsmål og svar
-score = 0
+# Define all questions
+questions = [
+    {
+        "title": "Om dig",
+        "question": "Hvor gammel er du?",
+        "type": "radio",
+        "options": ["A) 20", "B) 18", "C) 19", "D) 17", "E) Ingen ved"],
+        "correct": "E"
+    },
+    {
+        "title": "Drikke?",
+        "question": "Hvor mange øl kommer du til at drikke idag",
+        "type": "radio",
+        "options": ["A) 239", "B) 20", "C) 1 (fat svag)", "D) 30"],
+        "correct": "A"
+    },
+    {
+        "title": "日本語",
+        "question": "日本では、どんなフレーズを一番よく使いますか？",
+        "type": "radio",
+        "options": ["A) すみません", "B) よかったら、少し話さない？なんか、すごく気になってて。", "C) 私はハングリーネガダロ", "D) キャラメルラテをアイスで、シロップ多め、氷少なめでお願いします。"],
+        "correct": "C"
+    },
+    {
+        "title": "Ado",
+        "question": "Ado har en sang der hedder 'where winds meet'",
+        "type": "radio",
+        "options": ["A) Ja", "B) Nej"],
+        "correct": "A"
+    },
+    {
+        "title": "Færdig?",
+        "question": "Hvornår går vi hjem?",
+        "type": "radio",
+        "options": ["A) Kl. Når solen står op", "B) Kl.22:00", "C) Kl. 24:00", "D) Efter Kl. 03:00"],
+        "correct": "D"
+    },
+    {
+        "title": "Predator",
+        "question": "Hvem er IRL predator?",
+        "type": "radio",
+        "options": ["A) Erwin", "B) Epstein", "C) Griffith", "D) Ado"],
+        "correct": "B"
+    },
+    {
+        "title": "Inkognito?",
+        "question": "Hvor mange inkognito-faner har du åben på din telefon?",
+        "type": "radio",
+        "options": ["A) 0 (ikke nogen porno magaziner under sengen)", "B) 1-5", "C) 6-10", "D) 11+"],
+        "correct": "A"
+    },
+    {
+        "title": "tal",
+        "question": "Hvad er det bedste tal?",
+        "type": "radio",
+        "options": ["A) 67", "B) 69", "C) 999", "D) 666"],
+        "correct": "A"
+    },
+    {
+        "title": "Peak",
+        "question": "Hvad er peak?",
+        "type": "radio",
+        "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
+        "correct": "B"
+    },
+    {
+        "title": "Ikke peak?",
+        "question": "Hvad er ikke peak?",
+        "type": "radio",
+        "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
+        "correct": "A"
+    },
+    {
+        "title": "Hvem?",
+        "question": "Hvem er hvem?",
+        "type": "radio",
+        "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
+        "correct": "C"
+    },
+    {
+        "title": "bust en nut",
+        "question": "Lige så peak som at bust en nut?",
+        "type": "radio",
+        "options": ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"],
+        "correct": "D"
+    },
+    {
+        "title": "hmm",
+        "question": "Er det her i virkeligheden sidste spørgsmål?",
+        "type": "radio",
+        "options": ["A) Ja", "B) Nej"],
+        "correct": "B"
+    },
+    {
+        "title": "Spil?",
+        "question": "Hvad er det bedste spil?",
+        "type": "radio",
+        "options": ["A) League of Legends", "B) Minecraft", "C) Warhammer 40k", "D) Fortnite"],
+        "correct": "B"
+    },
+    {
+        "title": "Spørgsmål 4: Gaveindpakning",
+        "question": "Hvor mange møtrikker blev brugt i indpakningen?",
+        "type": "number",
+        "correct": 138
+    }
+]
 
-st.subheader("Om dig")
-q1 = st.radio(
-    "Hvor gammel er du?",
-    ["A) 20", "B) 18", "C) 19", "D) 17", "E) Ingen ved"]
-)
-if q1.startswith("E"):
-    score += 1
-
-st.subheader("Drikke?")
-q2 = st.radio(
-    "Hvor mange øl kommer du til at drikke idag",
-    ["A) 239", "B) 20", "C) 1 (fat svag)", "D) 30"]
-)
-if q2.startswith("A"):
-    score += 1
-    st.write("🎉 Fantastisk! Det har du også fortjent.")
-elif q2.startswith("B"):
-    st.write("😅 Hmm... er det ikke lidt for lidt.")
-elif q2.startswith("C"):
-    st.write("😊 Hvad fuck er det, ain't no way!")
-elif q2.startswith("D"):
-    st.write("Det var lidt bedre, men er det virkelig nok?.")
-
-st.subheader("日本語")
-q3 = st.radio(
-    "日本では、どんなフレーズを一番よく使いますか？",
-    ["A) すみません", "B) よかったら、少し話さない？なんか、すごく気になってて。", "C) 私はハングリーネガダロ", "D) キャラメルラテをアイスで、シロップ多め、氷少なめでお願いします。"]
-)
-if q3.startswith("C"):
-    score += 1
-st.subheader("Ado")
-q4 = st.radio(
-    "Ado har en sang der hedder 'where winds meet'",
-    ["A) Ja", "B) Nej"]
-)
-if q4.startswith("A"):
-    score += 1
-st.subheader("Færdig?")
-q5 = st.radio(
-    "Hvornår går vi hjem?",
-    ["A) Kl. Når solen står op", "B) Kl.22:00", "C) Kl. 24:00", "D) Efter Kl. 03:00"]
-)
-if q5.startswith("D"):
-    score += 1
-
-st.image(
-    "https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a38abeb&is=6a375a6b&hm=6b99c951ed4eabf6336239a4c4b3a531f1a1d14425db51fd1b5f21f1664e4cce&=&format=webp&width=864&height=1152",
-    width=400,
-)
-st.write("Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.")
-
-st.subheader("Predator")
-q6 = st.radio(
-    "Hvem er IRL predator?",
-    ["A) Erwin", "B) Epstein", "C) Griffith", "D) Ado"]
-)
-if q6.startswith("B"):
-    score += 1
-st.components.v1.iframe(
-    "https://tenor.com/embed/1538483505353367534",
-    width=480,
-    height=270,
-)
-
-st.subheader("Inkognito?")
-q7 = st.radio(
-    "Hvor mange inkognito-faner har du åben på din telefon?",
-    ["A) 0 (ikke nogen porno magaziner under sengen)", "B) 1-5", "C) 6-10", "D) 11+"]
-)
-if q7.startswith("A"):
-    score += 1
-st.subheader("tal")
-q8 = st.radio(
-    "Hvad er det bedste tal?",
-    ["A) 67", "B) 69", "C) 999", "D) 666"]
-)
-if q8.startswith("A"):
-    score += 1
-st.components.v1.iframe(
-    "https://tenor.com/embed/16727368109953357722",
-    width=480,
-    height=270,
-)
-st.subheader("Peak")
-q9 = st.radio(
-    "Hvad er peak?",
-    ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"]
-)
-if q9.startswith("B"):
-    score += 1
-st.subheader("Ikke peak?")
-q10 = st.radio(
-    "Hvad er ikke peak?",
-    ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"]
-)
-if q10.startswith("A"):
-    score += 1
-st.subheader("Hvem?")
-q11 = st.radio(
-    "Hvem er hvem?",
-    ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"]
-)
-if q11.startswith("C"):
-    score += 1
-st.subheader("bust en nut")
-q12 = st.radio(
-    "Lige så peak som at bust en nut?",
-    ["A) Erwin", "B) Alex & Kristoffer", "C) Ado", "D) Blive rapet af Epstein"]
-)
-if q12.startswith("D"):
-    score += 1
-
-st.image(
-    "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg",
-    width=400,
-)
-
-st.write("du er nu halvvejs")
-
-st.subheader("hmm")
-q13 = st.radio(
-    "Er det her i virkeligheden sidste spørgsmål?",
-    ["A) Ja", "B) Nej"]
-)
-if q13.startswith("B"):
-    score += 1
-st.subheader("Spil?")
-q14 = st.radio(
-    "Hvad er det bedste spil?",
-    ["A) League of Legends", "B) Minecraft", "C) Warhammer 40k", "D) Fortnite"]
-)
-if q14.startswith("B"):
-    score += 1
-st.subheader("Spørgsmål 4: Gaveindpakning")
-q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=200, step=1)
-if q == 138:
-    score += 1
-
-st.markdown("---")
-
-# Resultat
-if st.button("🔐 Vis resultat"):
-    st.subheader("🎉 Resultat 🎉")
-    st.write(f"Du fik {score} ud af 5 rigtige!")
+# Show current question
+if st.session_state.current_question < len(questions):
+    q = questions[st.session_state.current_question]
+    st.subheader(q["title"])
     
-    if score >= 4:
+    if q["type"] == "number":
+        answer = st.number_input(q["question"], min_value=0, max_value=200, step=1, key=f"q_{st.session_state.current_question}")
+        st.session_state.scores[st.session_state.current_question] = answer
+    else:
+        answer = st.radio(q["question"], q["options"], key=f"q_{st.session_state.current_question}")
+        if answer:
+            st.session_state.scores[st.session_state.current_question] = answer
+    
+    # Show special images and content for certain questions
+    if st.session_state.current_question == 4:  # After question 5
+        st.image(
+            "https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a38abeb&is=6a375a6b&hm=6b99c951ed4eabf6336239a4c4b3a531f1a1d14425db51fd1b5f21f1664e4cce&=&format=webp&width=864&height=1152",
+            width=400,
+        )
+        st.write("Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.")
+    
+    if st.session_state.current_question == 5:  # After question 6
+        st.components.v1.iframe(
+            "https://tenor.com/embed/1538483505353367534",
+            width=480,
+            height=270,
+        )
+    
+    if st.session_state.current_question == 7:  # After question 8
+        st.components.v1.iframe(
+            "https://tenor.com/embed/16727368109953357722",
+            width=480,
+            height=270,
+        )
+    
+    if st.session_state.current_question == 11:  # After question 12
+        st.image(
+            "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg",
+            width=400,
+        )
+        st.write("du er nu halvvejs")
+    
+    # Next button
+    col1, col2 = st.columns(2)
+    with col2:
+        if st.button("Næste spørgsmål →", key=f"next_{st.session_state.current_question}", use_container_width=True):
+            st.session_state.current_question += 1
+            st.rerun()
+else:
+    # Show results
+    st.markdown("---")
+    st.subheader("🎉 Resultat 🎉")
+    
+    # Calculate score
+    score = 0
+    for idx, q in enumerate(questions):
+        if idx in st.session_state.scores:
+            if q.get("type") == "number":
+                if st.session_state.scores[idx] == q["correct"]:
+                    score += 1
+            else:
+                if st.session_state.scores[idx].startswith(q["correct"]):
+                    score += 1
+    
+    st.write(f"Du fik {score} ud af {len(questions)} rigtige!")
+    
+    if score >= len(questions) - 2:
         st.success("Tillykke – du har gennemført quizen! 🎉")
-
         st.markdown(
             """
 Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt – det er virkelig sejt gået.  
@@ -260,3 +291,9 @@ Tak fordi du legede med – og tillykke igen fra os alle tre! 💸🎈
         )
     else:
         st.warning("Hmm, prøv igen og se, om du kan få adgang til gaven... 😉")
+    
+    # Restart button
+    if st.button("Start quizzen igen", use_container_width=True):
+        st.session_state.current_question = 0
+        st.session_state.scores = {}
+        st.rerun()
