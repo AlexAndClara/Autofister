@@ -29,10 +29,10 @@ st.write("Tillyke med huen Erdwin")
 st.write("Velkommen til din helt egen quiz – en lille del af din studentergave fra dine ynglings venner, der altid vil dig kun godt :). 🎁")
 st.write("Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt untagen idræt...! 👏")
 
-# Start Music button
+# Start Quiz button
 col1, col2, col3 = st.columns(3)
 with col2:
-    if st.button("▶️ START MUSIK", key="start_music_button", use_container_width=True):
+    if st.button("START QUIZZ", key="start_music_button", use_container_width=True):
         st.session_state.music_started = True
 
 # Hidden audio player placeholder
