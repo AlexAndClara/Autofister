@@ -87,7 +87,7 @@ if q5.startswith("D"):
     score += 1
 
 st.image(
-    "https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg",
+    "erwin_placeholder.png",
     width=400,
 )
 st.write("Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.")
@@ -175,7 +175,7 @@ q14 = st.radio(
 if q14.startswith("B"):
     score += 1
 st.audio(
-    "Jaxstyle - Fortnite.mp3",
+    "https://www.youtube.com/watch?v=CteoJ3Q-6cU&list=RDCteoJ3Q-6cU&start_radio=1",
     format="audio/mp3",
     start_time=0
 )
