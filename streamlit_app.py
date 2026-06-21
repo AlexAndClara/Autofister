@@ -256,7 +256,7 @@ if st.session_state.current_question < len(questions):
             height=270,
         )
     
-    if st.session_state.current_question == 7:  # After question 8
+    if st.session_state.current_question == 8:  # After question 8
         st.components.v1.iframe(
             "https://tenor.com/embed/16727368109953357722",
             width=480,
