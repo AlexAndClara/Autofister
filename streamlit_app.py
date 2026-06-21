@@ -86,7 +86,10 @@ q5 = st.radio(
 if q5.startswith("D"):
     score += 1
 
-st.image ("https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg?ex=6a36b1ab&is=6a35602b&hm=e9ff9b0f66d58b993afc31b44dfe40ba8118c8f1519213bb2f54b1b68bed6521&=&format=webp&width=864&height=1152")    
+st.image(
+    "https://media.discordapp.net/attachments/1016646559171104769/1517551712758530220/Screenshot_20260619_172658_Gallery.jpg",
+    width=400,
+)
 st.write("Erwin er bygget som en gren i modvind og har brugt flere timer på at male Warhammer-figurer end på at føre en samtale med en kvinde. Han siger 'god aften, m'lady' uden ironi og har en længere liste over Space Marine-kapitler end telefonnumre. Hans Snapchat-streaks er med de samme tre gutter, og hans største romantiske oplevelse var, da ekspedienten i Faraos Cigarer sagde: 'Vi ses næste uge.' Hvis charisma var en stat, havde han dumpet sit terningekast med en naturlig 1'er. Han er typen, der kan forklare hele Imperiets historie på 45 minutter, men får hjertebanken, hvis en pige spørger om klokken.")
 
 st.subheader("Predator")
