@@ -289,7 +289,7 @@ else:
                     score += 1
     
     st.write(f"Du fik {score} ud af {total_questions} rigtige!")
-st.ballons = st.balloons(200)
+st.ballons = st.balloons()
     if score == total_questions:
         st.success("Tillykke – du har gennemført quizen! 🎉🎀💕🍫")
         st.markdown(
