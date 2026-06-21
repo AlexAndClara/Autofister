@@ -96,7 +96,10 @@ q6 = st.radio(
 )
 if q6.startswith("B"):
     score += 1
-st.gif("https://tenor.com/da/view/chrishasen-gif-1538483505353367534")
+st.markdown(
+    '<img src="https://tenor.com/da/view/chrishasen-gif-1538483505353367534" alt="gif">',
+    unsafe_allow_html=True,
+)
 
 st.subheader("Inkognito?")
 q7 = st.radio(
@@ -112,7 +115,10 @@ q8 = st.radio(
 )
 if q8.startswith("A"):
     score += 1
-st.gif("https://tenor.com/da/view/bosnov-67-bosnov-67-67-meme-gif-16727368109953357722")
+st.markdown(
+    '<img src="https://tenor.com/da/view/bosnov-67-bosnov-67-67-meme-gif-16727368109953357722" alt="gif">',
+    unsafe_allow_html=True,
+)
 st.subheader("Peak")
 q9 = st.radio(
     "Hvad er peak?",
@@ -144,7 +150,7 @@ if q12.startswith("D"):
 
 st.image("https://www.google.com/search?q=epstein&oq=epstein&gs_lcrp=EgZjaHJvbWUqDwgAEAAYQxjjAhiABBiKBTIPCAAQABhDGOMCGIAEGIoFMgwIARAuGEMYgAQYigUyDwgCEAAYQxjHAxiABBiKBTIMCAMQLhhDGIAEGIoFMgwIBBAAGEMYgAQYigUyDwgFEC4YQxjHAxiABBiKBTIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyMzJqMGo5qAIGsAIB8QVUHgSZ9AiEug&sourceid=chrome&ie=UTF-8#sv=CAMSaxoyKhBlLXU4T3hpa1dIV2RBWEhNMg51OE94aWtXSFdkQVhITToObk9pTFBuNG5EdEJtSU0gBCoxChtfaXQwM2FwejFOdnF4aS1nUDBQVzI4QU1fNTcSEGUtdThPeGlrV0hXZEFYSE0YADABGAcggMXELUoIEAEYASABKAE")
 
-st.underline("Du er snart halvejs")
+st.markdown("<u>Du er snart halvejs</u>", unsafe_allow_html=True)
 
 
 st.subheader("Spørgsmål 4: Gaveindpakning")
