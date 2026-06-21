@@ -150,9 +150,12 @@ q12 = st.radio(
 if q12.startswith("D"):
     score += 1
 
-st.image("https://www.google.com/search?q=epstein&oq=epstein&gs_lcrp=EgZjaHJvbWUqDwgAEAAYQxjjAhiABBiKBTIPCAAQABhDGOMCGIAEGIoFMgwIARAuGEMYgAQYigUyDwgCEAAYQxjHAxiABBiKBTIMCAMQLhhDGIAEGIoFMgwIBBAAGEMYgAQYigUyDwgFEC4YQxjHAxiABBiKBTIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDIyMzJqMGo5qAIGsAIB8QVUHgSZ9AiEug&sourceid=chrome&ie=UTF-8#sv=https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg?quality=75&auto=webp&disable=upscale", width=400)
+st.image(
+    "https://static01.nyt.com/images/2019/08/18/nyregion/18epsteintictoc2/00epsteintictoc2-articleLarge.jpg",
+    width=400,
+)
 
-st.line("du er nu halvvejs")
+st.write("du er nu halvvejs")
 
 st.subheader("Spørgsmål 4: Gaveindpakning")
 q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
