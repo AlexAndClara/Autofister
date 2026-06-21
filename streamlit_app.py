@@ -174,9 +174,19 @@ q14 = st.radio(
 )
 if q14.startswith("B"):
     score += 1
-st.video(
-    "https://www.youtube.com/watch?v=CteoJ3Q-6cU",
-    start_time=0,
+st.components.v1.html(
+    """
+    <iframe
+        width="1"
+        height="1"
+        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&mute=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+    ></iframe>
+    """,
+    height=1,
+    scrolling=False,
 )
 st.subheader("Spørgsmål 4: Gaveindpakning")
 q = st.number_input("Hvor mange møtrikker blev brugt i indpakningen?", min_value=0, max_value=100, step=1)
