@@ -290,9 +290,10 @@ else:
     
     st.write(f"Du fik {score} ud af {total_questions} rigtige!")
     st.balloons()
-    additional_balloons = 20 - score  # More balloons for higher scores
+    additional_balloons = 25 - score  # More balloons for higher scores
     for _ in range(additional_balloons):
         st.balloons()
+
     if score == total_questions:
         st.success("Tillykke – du har gennemført quizen! 🎉🎀💕🍫")
         st.markdown(
