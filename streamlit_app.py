@@ -305,6 +305,7 @@ Tak fordi du legede med mig?🥺👉👈 – og tillykke igen fra os alle to! �
             """
         )
 st.balloons(9)  # Show balloons for celebration
+
     else:
         st.warning("Hmm, prøv igen og se, om du kan få adgang til gaven... 😉")
     
