@@ -24,7 +24,7 @@ st.markdown(
 )
 
 # Titel og intro
-st.markdown('<p class="big-font">🎓 Tillykke med huen, Erdwin! 🎓</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">Erdwin Studentertrial/totur 🎓💅</p>', unsafe_allow_html=True)
 st.write("Tillyke med huen Erdwin")
 st.write("Velkommen til din helt egen quiz – en lille del af din studentergave fra dine ynglings venner, der altid vil dig kun godt :). 🎁")
 st.write("Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt untagen idræt...! 👏")
