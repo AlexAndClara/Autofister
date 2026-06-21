@@ -177,15 +177,16 @@ if q14.startswith("B"):
 st.components.v1.html(
     """
     <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=1&modestbranding=1&rel=0"
+        width="1"
+        height="1"
+        style="position:absolute; left:-9999px;"
+        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen
     ></iframe>
     """,
-    height=340,
+    height=1,
     scrolling=False,
 )
 st.subheader("Spørgsmål 4: Gaveindpakning")
