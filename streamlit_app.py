@@ -33,7 +33,9 @@ st.write("Vi er glade for, at du har gennemført gymnasiet og har klaret dig god
 gladhed = st.slider("På en skala fra 1-10, hvor glad er du for at være færdig med gymnasiet? 🎓", 1, 10)
 
 # Dynamisk respons baseret på valg
-if gladhed < 5:
+if gladhed < 3:
+    st.write("I PASSED OUT 3 TIMES AND AM PROBABLY EVEN MORE BRAIN DAMAGED NOW!!!!!!!!!! YOU BETTER BE MORE HAPPY!!!!. OR ELSE!🔪")
+elif 3 <= gladhed <= 5:
     st.write("😅 Hmm... du kunne vist godt være lidt gladere.")
 elif 5 <= gladhed <= 7:
     st.write("😊 Det lyder som en lettelse – godt gået!")
@@ -289,7 +291,7 @@ else:
     st.write(f"Du fik {score} ud af {total_questions} rigtige!")
     
     if score == total_questions:
-        st.success("Tillykke – du har gennemført quizen! 🎉🎀💕🍫🔪")
+        st.success("Tillykke – du har gennemført quizen! 🎉🎀💕🍫")
         st.markdown(
             """
 Vi er glade for, at du har gennemført gymnasiet og har klaret dig godt – det er virkelig sejt gået.  
