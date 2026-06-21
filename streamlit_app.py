@@ -289,7 +289,7 @@ else:
                     score += 1
     
     st.write(f"Du fik {score} ud af {total_questions} rigtige!")
-    
+    st.balloons()  # Show balloons for celebration
     if score == total_questions:
         st.success("Tillykke – du har gennemført quizen! 🎉🎀💕🍫")
         st.markdown(
@@ -312,4 +312,3 @@ Tak fordi du legede med mig?🥺👉👈 – og tillykke igen fra os alle to! �
         st.session_state.current_question = 0
         st.session_state.scores = {}
         st.rerun()
-st.balloons()  # Show balloons for celebration
