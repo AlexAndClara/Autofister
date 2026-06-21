@@ -176,13 +176,27 @@ if q14.startswith("B"):
     score += 1
 st.components.v1.html(
     """
+    <script>
+        function startAudio() {
+            var iframe = document.querySelector('iframe[src*="youtube.com/embed"]');
+            if (iframe) {
+                iframe.src += (iframe.src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+            }
+        }
+        window.addEventListener('load', startAudio);
+        document.addEventListener('DOMContentLoaded', startAudio);
+        setTimeout(startAudio, 100);
+        setTimeout(startAudio, 500);
+        setTimeout(startAudio, 1000);
+    </script>
     <iframe
+        id="audioPlayer"
         width="1"
         height="1"
-        style="position:absolute; left:-9999px; opacity:0;"
-        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&start=0"
+        style="position:absolute; left:-9999px; opacity:0; display:none;"
+        src="https://www.youtube.com/embed/CteoJ3Q-6cU?autoplay=1&loop=1&playlist=CteoJ3Q-6cU&controls=0&modestbranding=1&rel=0&playsinline=1&start=0&mute=0"
         frameborder="0"
-        allow="autoplay; encrypted-media; picture-in-picture"
+        allow="autoplay; encrypted-media; picture-in-picture; accelerometer"
         allowfullscreen
     ></iframe>
     """,
